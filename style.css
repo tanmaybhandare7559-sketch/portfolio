@@ -276,3 +276,86 @@ body {
     filter: blur(28px) saturate(120%);
     animation: slowFloat 12s ease-in-out infinite reverse;
     top: 18px;
+}
+/* ----------------------- */
+/* 📱 Mobile Optimization  */
+/* ----------------------- */
+
+@media (max-width: 768px) {
+  /* General Layout Adjustments */
+  section {
+    padding: 60px 5%;
+  }
+
+  .home {
+    padding: 100px 5%;
+    text-align: center;
+    background-attachment: scroll; /* Prevent background from stretching */
+  }
+
+  .home-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  footer {
+    padding: 30px 10px;
+  }
+
+  /* Disable complex animations if user prefers reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
